@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  list-style: none;
+}
+
+:root {
+  --dark-text: #0b0223;
+  --light-text: #3c354f;
+  --primary-color: linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%);
+  --secondary-color: #4ec5f7;
+}
+
+/* shared style start */
+.btn-primary {
+  padding: 15px 25px;
+  /* background: var(--primary-color); */
+  background-color: #ff42a5;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.bg-sky {
+  background-color: var(--secondary-color);
+}
+/* shared style end */
+
+/* header style start */
+header {
+  background-image: url("../images/Group14.png");
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-position: center left;
+}
+.logo img {
+  width: 25%;
+}
+.logo {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h3::first-letter {
+  color: #ff42a5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 20px 0;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav ul li {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--light-text);
+}
+
+nav > ul > li:last-child {
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(11, 2, 35, 0.1);
+}
+/* header style end */
+
+/* banner style start */
+.banner-container {
+  max-width: 1440px;
+  padding: 0px 150px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-content,
+.banner-img-container {
+  flex: 1;
+}
+
+.banner-content h2 {
+  color: var(--dark-text);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.banner-content h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.banner-content button {
+  margin-right: 15px;
+}
+
+.banner-img-container img {
+  width: 100%;
+}
+
+.banner-content ul {
+  margin: 15px 0;
+}
+
+.banner-content ul li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+/* banner style end */
