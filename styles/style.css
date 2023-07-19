@@ -545,14 +545,17 @@ footer ul li {
   .logo {
     margin-bottom: 10px;
   }
-  .item {
-    font-size: 0.9rem;
+  .item{
+    font-size: 0.6rem;
     font-weight: 400;
-    padding: 8px 0px;
+    padding: 5px 0px;
     gap: 5px;
   }
   .item img {
     width: 10%;
+  }
+  .variants{
+    padding: 30px 0px;
   }
 }
 
