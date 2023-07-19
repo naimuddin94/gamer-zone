@@ -11,13 +11,15 @@
 :root {
   --dark-text: #0b0223;
   --light-text: #3c354f;
+  --lighter-text: #534c64;
+  --main-color: #ff42a5;
   --primary-color: linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%);
   --secondary-color: #4ec5f7;
 }
 
 /* shared style start */
 .btn-primary {
-  padding: 15px 25px;
+  padding: 12px 25px;
   /* background: var(--primary-color); */
   background-color: #ff42a5;
   border: none;
@@ -30,18 +32,45 @@
 .bg-sky {
   background-color: var(--secondary-color);
 }
+
+.gradient-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 250%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--dark-text);
+}
+.description {
+  color: var(--light-text);
+  font-size: 0.9rem;
+  padding: 20px 0;
+}
 /* shared style end */
 
 /* header style start */
 header {
-  background-image: url("../images/Group14.png");
-  background-repeat: no-repeat;
-  background-size: 50% 100%;
-  background-position: center left;
+  /* position: sticky;
+  top: 0; */
+  z-index: 10;
 }
+
 .logo img {
-  width: 25%;
+  width: 40px;
 }
+
 .logo {
   font-size: 1.5rem;
   display: flex;
@@ -84,9 +113,15 @@ nav > ul > li:last-child {
 /* header style end */
 
 /* banner style start */
+.banner {
+  background-image: url("../images/Group14.png");
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-position: center left;
+}
 .banner-container {
   max-width: 1440px;
-  padding: 0px 150px;
+  padding: 0 10vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -96,6 +131,9 @@ nav > ul > li:last-child {
 .banner-content,
 .banner-img-container {
   flex: 1;
+  /* align-self: stretch; */
+  /* display: flex;
+  align-items: center; */
 }
 
 .banner-content h2 {
@@ -106,13 +144,9 @@ nav > ul > li:last-child {
 }
 
 .banner-content h1 {
-  text-transform: uppercase;
-  font-size: 3rem;
+  /* text-transform: uppercase; */
+  font-size: 3.5rem;
   font-weight: 800;
-  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .banner-content button {
@@ -134,3 +168,292 @@ nav > ul > li:last-child {
   gap: 20px;
 }
 /* banner style end */
+
+/* gamer section start */
+.gamers {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 66, 165, 0.03) 0%,
+    rgba(255, 66, 165, 0.03) 100%
+  );
+}
+.gamer {
+  padding: 20px 10vw;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.gamer-img img {
+  width: 100%;
+}
+
+.gamer-img,
+.gamer-content {
+  flex: 1;
+}
+
+.gamer-content {
+  text-align: end;
+  max-width: 400px;
+}
+
+.gamer-content h2,
+.gamer-content h3 {
+  color: var(--lighter-text);
+  padding-top: 8px;
+}
+
+.gamer-content h3 {
+  font-weight: 500;
+}
+/* gamer section end */
+
+/* online section style start */
+.online {
+  max-width: 1440px;
+  margin: 30px auto;
+}
+
+.online-content {
+  text-align: center;
+}
+
+.online-img-container {
+  padding: 10px 10vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.online-img img {
+  width: 100%;
+}
+/* online section style end */
+
+/* instantly style start */
+.instantly {
+  padding: 0 10vw;
+  display: flex;
+  gap: 90px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instantly-img img:first-child {
+  width: 100%;
+}
+
+.instantly-content {
+  flex: 1;
+  text-align: end;
+}
+
+.ins-cont {
+  max-width: 300px;
+}
+
+.instantly-img {
+  flex: 1;
+  position: relative;
+}
+
+.instant-small-img {
+  position: absolute;
+  bottom: -8%;
+  left: -15%;
+  width: 35%;
+}
+/* instantly style end */
+
+/* play online style start */
+.play-online{
+  padding: 100px 10vw;
+  display: flex;
+  align-items: center;
+}
+
+.play-img img{
+  width: 100%;
+}
+
+.play-img{
+  flex: 1;
+  position: relative;
+}
+
+.play-content{
+  flex: 1;
+}
+
+.small-img{
+  position: absolute;
+  bottom: -10%;
+  left: 80%;
+  width: 35%;
+}
+.play-content{
+  display: flex;
+  justify-content: end;
+}
+
+/* play online style end */
+
+/* careers style start */
+.careers{
+  background: var(--primary-color);
+  width: 100vw;
+  padding: 40px 10vw;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.career-img img{
+  width: 100%;
+}
+
+.career-content, .career-img{
+  flex: 1;
+  color: #e6e6e6;
+}
+
+.career-content h5{
+  font-weight: 500;
+}
+
+.career-content p{
+  color: #e6e6e6;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+.career-content button{
+  margin-top: 20px;
+  background-color: #fff;
+  color: var(--main-color);
+}
+
+.list{
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-list{
+  text-align: end;
+}
+/* careers style end */
+
+/* variants style start */
+.item img{
+  width: 20%;
+}
+.variants{
+  border: 1px solid red;
+  text-align: center;
+  padding: 40px 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.item{
+  padding: 10px;
+  display: flex;
+  min-width: fit-content;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  border-radius: 30px;
+}
+/* variants style end */
+
+
+/* footer style start */
+footer{
+  background-color: #0B0223;
+  color: #fff;
+  padding: 7rem 0;
+}
+
+.footer-content{
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer .logo{
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li{
+  font-size: 0.9rem;
+}
+
+.footer-menu,.social-icons,.terms-menu{
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  margin: 20px 0;
+}
+
+.footer-menu ul, .social-icons ul,.terms-menu ul{
+  display: flex;
+  gap: 5vw;
+  justify-content: center;
+}
+
+.social-icons{
+  margin-bottom: 60px;
+}
+
+.terms-menu, .copy-right{
+  color: rgba(255, 255, 255, 0.60);
+}
+/* footer style  */
+
+/* for responsive */
+@media screen and (max-width: 576px) {
+  nav,
+  nav > ul,
+  .gamer,
+  .instantly,.careers,.footer-menu,.social-icons,.terms-menu {
+    flex-direction: column;
+  }
+  .banner-container, .play-online {
+    flex-direction: column-reverse;
+  }
+  .banner-content {
+    padding: 40px;
+    background-image: url("../images/Group14.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .online-img-container {
+    grid-template-columns: 1fr;
+  }
+  .instant-small-img {
+    bottom: -30px;
+    left: -50px;
+  }
+  .instantly-content,.play-content {
+    text-align: center;
+  }
+  .instantly-img{
+    margin-left: 30px;
+  }
+  .play-img{
+    margin-right: 30px;
+    margin-top: 40px;
+  }
+}
