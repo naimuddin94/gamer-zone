@@ -18,12 +18,12 @@
 }
 
 /* shared style start */
-body{
+body {
   max-width: 1440px;
   margin: 0px auto;
 }
 
-li{
+li {
   cursor: pointer;
 }
 
@@ -39,7 +39,7 @@ li{
   transition: 0.3s;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   background-color: transparent;
   outline: 1.5px solid var(--main-color);
   color: var(--main-color);
@@ -118,7 +118,7 @@ nav ul li {
   color: var(--light-text);
 }
 
-nav ul li:hover{
+nav ul li:hover {
   color: var(--main-color);
 }
 
@@ -315,7 +315,7 @@ nav > ul > li:last-child {
 /* instantly style end */
 
 /* play online style start */
-.online{
+.online {
   margin: 50px 0;
 }
 .play-online {
@@ -387,7 +387,7 @@ nav > ul > li:last-child {
   color: var(--main-color);
 }
 
-.career-content button:hover{
+.career-content button:hover {
   background-color: transparent;
   outline: 1.5px solid white;
   color: white;
@@ -432,6 +432,7 @@ nav > ul > li:last-child {
 
 .item:hover {
   outline: 1.5px solid var(--main-color);
+  color: var(--main-color);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 /* variants style end */
@@ -485,7 +486,7 @@ footer ul li {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.terms-menu ul li:hover{
+.terms-menu ul li:hover {
   text-decoration: underline;
   color: var(--secondary-color);
 }
@@ -493,7 +494,7 @@ footer ul li {
 
 /* for responsive */
 @media screen and (max-width: 576px) {
-  header{
+  header {
     position: static;
   }
   nav,
@@ -514,7 +515,7 @@ footer ul li {
     padding: 40px;
     background-image: url("../images/Group14.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 120% 100%;
     background-position: center;
   }
   .online-img-container {
@@ -535,7 +536,8 @@ footer ul li {
     margin-right: 30px;
     margin-top: 40px;
   }
-  .banner-content button,.logo {
+  .banner-content button,
+  .logo {
     margin-bottom: 10px;
   }
   .item {
